@@ -1,0 +1,194 @@
+[
+  {
+    "title": "Details Collection",
+    "description": "Collect information from Candidates on their education, work experience, contact no,etc",
+    "formItems": [
+      {
+        "label": "Name",
+        "required": true,
+        "id": "name",
+        "type": "text",
+        "placeholder": "Example: \"John Doe\""
+      },
+      {
+        "label": "Email",
+        "required": true,
+        "id": "email",
+        "type": "email",
+        "placeholder": "Example - userid@gmail.com"
+      },
+      {
+        "label": "Date of Birth",
+        "required": false,
+        "id": "dob",
+        "type": "date",
+        "placeholder": "DD/MM/YYY"
+      },
+      {
+        "label": "Contact",
+        "required": false,
+        "id": "contactno",
+        "type": "number",
+        "placeholder": "Enter your 10 digit contact no"
+      }
+    ]
+  },
+  {
+    "title": "Document Collection",
+    "description": "Save time and efforts: Explore this template to find a set of questions required for document collection ",
+    "formItems": [
+      {
+        "label": "10th Marksheet",
+        "required": true,
+        "id": "tenthMarksheet",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "12th Marksheet",
+        "required": true,
+        "id": "twelfthMarksheet",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Graduation Marksheet",
+        "required": true,
+        "id": "graduationMarksheet",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Post Graduation Marksheet",
+        "required": true,
+        "id": "postGraduationMarksheet",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Offer Letter",
+        "required": true,
+        "id": "offerLetter",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Salary Slips",
+        "required": true,
+        "id": "salarySlips",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Bank Statement",
+        "required": true,
+        "id": "bankStatement",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Increment Letter (if any)",
+        "required": true,
+        "id": "incrementLetter",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      },
+      {
+        "label": "Others (if any)",
+        "required": true,
+        "id": "otherDocuments",
+        "type": "file",
+        "placeholder": "Attach upto 5kb"
+      }
+    ]
+  },
+  {
+    "title": "Statement of Purpose",
+    "description": "Start creating a new form with the wide options of fields available",
+    "formItems": [
+      {
+        "label": "Tell me about a time you were asked to do something you had never done before. How did you react? What did you learn?",
+        "required": false,
+        "id": "statement1",
+        "type": "textarea",
+        "placeholder": "Enter a description for the long answer"
+      },
+      {
+        "label": "Tell me about the last time something significant didn’t go according to plan at work. What was your role? What was the outcome?",
+        "required": false,
+        "id": "statement2",
+        "type": "textarea",
+        "placeholder": "Enter a description for the long answer"
+      },
+      {
+        "label": "What are the three things that are most important to you in a job?",
+        "required": false,
+        "id": "statement3",
+        "type": "textarea",
+        "placeholder": "Enter a description for the long answer"
+      }
+    ]
+  },
+  {
+    "title": "Interview Availability ",
+    "description": "Start creating a new form with the wide options of fields available",
+    "formItems": [
+      {
+        "label": "Email",
+        "required": true,
+        "id": "interviewEmail",
+        "type": "email",
+        "placeholder": "Example - userid@gmail.com"
+      },
+      {
+        "label": "Location",
+        "required": true,
+        "id": "location",
+        "type": "datalist",
+        "options": [
+          { "optionName": "Chennai", "optionValue": "chennai" },
+          { "optionName": "Delhi", "optionValue": "delhi" },
+          { "optionName": "Hyderabad", "optionValue": "hyderabad" },
+          { "optionName": "Kolkata", "optionValue": "kolkata" }
+        ],
+        "placeholder": "Search or enter your location"
+      },
+      {
+        "label": "Interview Date",
+        "required": false,
+        "id": "interviewDate",
+        "type": "date",
+        "placeholder": "DD/MM/YYY"
+      },
+      {
+        "label": "Interview Time",
+        "required": false,
+        "id": "interviewTime",
+        "type": "time",
+        "placeholder": "12:00"
+      },
+      {
+        "label": "Time Zone",
+        "required": false,
+        "id": "timezone",
+        "type": "select",
+        "options": [
+          { "optionName": "Kolkata", "optionValue": "kolkata" },
+          { "optionName": "Chennai", "optionValue": "chennai" }
+        ],
+        "placeholder": "Search or Select a time zone from below "
+      },
+      {
+        "label": "Interview Medium",
+        "required": false,
+        "id": "interviewMedium",
+        "type": "select",
+        "options": [
+          { "optionName": "Skype", "optionValue": "skype" },
+          { "optionName": "Webex", "optionValue": "webex" }
+        ],
+        "placeholder": "Search or Select a time zone from below "
+      }
+    ]
+  }
+]

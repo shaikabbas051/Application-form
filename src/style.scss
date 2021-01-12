@@ -1,0 +1,328 @@
+h1,
+p {
+  font-family: Lato;
+  margin: 0px;
+}
+body {
+  margin: 0px;
+}
+div {
+  box-sizing: border-box;
+}
+.middle {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 450px auto;
+  flex: 1;
+  .sidebar {
+    // background: grey;
+    overflow: scroll;
+    padding: 10px 50px;
+    .template {
+      border: 2px solid grey;
+      border-radius: 8px;
+      height: 118px;
+      margin: 25px 0px;
+      padding: 24px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 70px auto;
+      grid-gap: 16px;
+      &:hover {
+        cursor: pointer;
+      }
+      .logo {
+        background-color: #d8d8d8;
+        width: 70px;
+        height: 70px;
+        border-radius: 4px;
+      }
+      .content {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        .title {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+        .sub-title {
+          font-size: 12px;
+          color: #595959;
+        }
+      }
+    }
+    .active-template {
+      background: #f5f8fa;
+      border: 1px solid #1a8fe6;
+      box-shadow: 0px 0px 8px rgba(52, 52, 52, 0.3);
+      .logo {
+        background-color: rgba(26, 143, 230, 0.3);
+      }
+    }
+  }
+  .form-container {
+    background-color: #f5f5f5;
+    padding: 35px 95px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: scroll;
+    .form {
+      background: #ffffff;
+      box-shadow: 0px 1px 4px rgba(52, 52, 52, 0.15);
+      border-radius: 8px;
+      min-height: 550px;
+      .form-header {
+        height: 150px;
+        background-color: rgba(26, 143, 230, 0.15);
+        padding-top: 36px;
+        padding-left: 36px;
+        h2 {
+          margin: 0px;
+          color: #414141;
+        }
+        h4 {
+          font-weight: normal;
+          margin-top: 0px;
+          color: #595959;
+          font-size: 14px;
+        }
+        p {
+          color: #888888;
+          font-size: 12px;
+        }
+      }
+      .fields {
+        padding: 20px 95px;
+      }
+    }
+  }
+}
+input,
+textarea,
+.fileField,
+.dateField,
+select {
+  border: 1px solid #888888;
+  border-radius: 4px;
+  height: 40px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  &::-webkit-input-placeholder {
+    padding-left: 5px;
+  }
+}
+label {
+  font-size: 16px;
+  color: #595959;
+}
+.form-group {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+input[type="date"],
+input[type="file"],
+input[type="time"] {
+  width: 200px;
+}
+
+input[type="date"] {
+  color: #999;
+}
+input[type="date"].hasValue {
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.header {
+  box-shadow: 0px 0px 8px rgba(52, 52, 52, 0.3);
+  justify-content: space-around;
+  align-items: center;
+  .progress {
+    // background-color: lightcyan;
+    width: 75%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    z-index: 10;
+    line-height: 20px;
+    display: flex;
+    li {
+      // display: inline-block;
+      width: 25%;
+      text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        background: white;
+        display: flex;
+        align-items: center;
+        padding: 0px 2px;
+      }
+      span:first-of-type {
+        background: white;
+        border: 1px solid #d8d8d8;
+        border-radius: 50%;
+        height: 8px;
+        display: inline-block;
+        width: 8px;
+        position: relative;
+        line-height: 20px;
+        svg {
+          width: 100%;
+          height: 100%;
+          vertical-align: top;
+        }
+        margin-right: 2px;
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        color: #333;
+        position: absolute;
+        background: rgba(26, 143, 230, 0.15);
+        left: -50%;
+        right: 0;
+        height: 2px;
+        top: 10px;
+        z-index: -1;
+      }
+    }
+    li.hasCompleted {
+      span:first-of-type {
+        background: #1a8fe6;
+        border: 1px solid #1a8fe6;
+      }
+    }
+    li:first-of-type {
+      &::before {
+        display: none;
+      }
+    }
+    li:last-of-type {
+      &::before {
+        right: 50%;
+      }
+    }
+  }
+  .hasCompleted {
+    span {
+      &::before {
+        background-color: #1a8fe6;
+      }
+    }
+  }
+  .close-btn {
+    position: absolute;
+    right: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.header,
+.footer {
+  height: 68px;
+  display: flex;
+}
+.footer {
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  box-shadow: 0px 0px 8px rgba(52, 52, 52, 0.3);
+
+  button {
+    width: 109px;
+    height: 32px;
+    border: none;
+    background: #1a8fe6;
+    border-radius: 4px;
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+.fileField,
+.dateField {
+  display: block;
+  width: 200px;
+  line-height: 40px;
+  padding-left: 15px;
+}
+select {
+  display: block;
+  color: #c3c3c3;
+}
+select.hasValue {
+  color: black;
+}
+textarea {
+  padding: 15px 10px;
+  min-height: 80px;
+  &::placeholder {
+    color: #c3c3c3;
+  }
+}
+.word-limit-text {
+  font-size: 10px;
+  line-height: 12px;
+  text-align: right;
+  color: #8a8a8a;
+}
+.placeholder {
+  color: #c3c3c3;
+}
+.form-info {
+  margin-bottom: 20px;
+  .title {
+    color: #414141;
+    margin: 0px;
+  }
+  .sub-title {
+    color: #414141;
+    font-size: 13px;
+  }
+}
+.line {
+  background: grey;
+  height: 8px;
+  width: 120px;
+}
+.sub-title.line {
+  background: grey;
+  height: 8px;
+  width: 180px;
+}
+.line {
+  animation: shimmer 1s infinite ease-in-out;
+}
+@keyframes shimmer {
+  0% {
+    background: rgba(165, 165, 165, 0.1);
+  }
+  50% {
+    background: rgba(165, 165, 165, 0.4);
+  }
+  100% {
+    background: rgba(165, 165, 165, 0.1);
+  }
+}
+.sidebar,
+.form-container {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
